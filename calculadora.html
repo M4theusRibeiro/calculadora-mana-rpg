@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Mana</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>Calculadora de mana</h1>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div>
+            <div>
+                <label for="atributo1">Atributo 1:</label>
+                <input type="text" id="atributo1">
+            </div>
+            <div>
+                <label for="atributo2">Atributo 2:</label>
+                <input type="text" id="atributo2">
+            </div>
+            <div>
+                <label for="raca">Raça:</label>
+                <input type="text" id="raca">
+            </div>
+            <button onclick="calcularMana()">Calcular mana</button>
+            <div id="resultado">
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+<script>
+    var mana = 0;
+    function calcularMana() {
+
+        var atributo1 = Number(document.getElementById("atributo1").value);
+        var atributo2 = Number(document.getElementById("atributo2").value);
+        var raca = Number(document.getElementById("raca").value);
+        mana = (((((atributo1 + atributo2) / 2) * 10) + atributo2) + raca);
+        resultado.innerHTML = "A sua mana total é de " + mana;
+    }
+
+</script>
