@@ -1,0 +1,1 @@
+# calculadora-mana-rpg
